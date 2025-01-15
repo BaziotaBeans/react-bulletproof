@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Valida o formato da mensagem do commit
+pnpm exec commitlint --edit $1
+
+# Opcional: Você pode adicionar mais validações aqui
+# Por exemplo, verificar se a mensagem tem um número mínimo de caracteres
+# if [ $(cat $1 | wc -c) -lt 10 ]; then
+#   echo "Mensagem de commit muito curta (mínimo 10 caracteres)"
+#   exit 1
+# fi
+
