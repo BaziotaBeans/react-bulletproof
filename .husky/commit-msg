@@ -1,8 +1,8 @@
 #!/bin/sh
-. "$(dirname -- "$0")/_/husky.sh"
+. "$(dirname "$0")/_/husky.sh"
 
 # Valida o formato da mensagem do commit
-pnpm exec commitlint --edit $1
+pnpm exec commitlint --edit "$1"
 
 # Opcional: Você pode adicionar mais validações aqui
 # Por exemplo, verificar se a mensagem tem um número mínimo de caracteres
