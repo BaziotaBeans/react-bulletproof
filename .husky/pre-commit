@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/_/husky.sh"
+#!/bin/sh
 
-# Executa o lint no código
-pnpm run lint
+pnpm exec lint-staged
