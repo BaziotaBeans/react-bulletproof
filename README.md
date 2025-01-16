@@ -34,7 +34,7 @@ src/
 │ │ ├── types/
 │ │ └── validators/
 │ └── usuários/   # Recurso de usuários
-├── ganchos /   # Ganchos compartilhados
+├── hooks /   # Hooks compartilhados
 ├── lib/  # Funções utilitárias
 ├── providers/  # Provedores de contexto
 ├── routes/   # Configurações de rota global
