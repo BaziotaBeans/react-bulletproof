@@ -265,6 +265,46 @@ O projeto inclui uma implementação completa de modo escuro utilizando Tailwind
 5. Siga as regras do ESLint e Prettier
 6. Use mensagens de commit Git adequadas
 
+## 📚 Dicas de Seguranças
+
+A **autenticação** verifica a identidade do usuário, geralmente usando JWTs. Tokens devem ser armazenados com segurança:
+
+- **Cookies com HttpOnly** são mais seguros contra XSS.
+- **localStorage** é mais prático, mas vulnerável a XSS.
+- **sessionStorage** é útil para sessões curtas e menos críticas.
+
+A autorização regula o acesso a recursos:
+
+**RBAC** (baseado em papéis) define permissões gerais, como ADMIN e USER.
+**PBAC** (baseado em permissões) é mais específico, como permitir apenas ao autor excluir um recurso.
+
+Recomenda-se proteger entradas de usuário contra ataques XSS e usar ferramentas como react-query-auth para gerenciar o estado do usuário.
+
+Para mais informações [Clique aqui](https://github.com/alan2207/bulletproof-react/blob/master/docs/security.md)
+
+## 💅 Componentes e Estilização
+
+1. **Boas práticas para componentes**
+
+   - Mantenha componentes, funções, estilos e estados próximos de onde são usados para melhorar a legibilidade e desempenho.
+   - Evite componentes grandes com muitas funções de renderização aninhadas; extraia trechos em componentes menores.
+   - Garanta consistência no estilo de código com linters e formatadores.
+   - Limite o número de props de um componente, dividindo-o em partes menores ou usando composição.
+   - Abstraia componentes compartilhados em uma biblioteca para maior consistência e manutenção.
+
+2. **Bibliotecas de componentes**
+
+   - Completas: Oferecem componentes já estilizados, como Chakra UI, MUI, AntD e Mantine.
+   - Headless: Componentes não estilizados, ideais para design personalizado, como Radix UI e Headless UI.
+
+3. **Soluções de estilização**
+   - Opções incluem Tailwind, CSS Modules, styled-components, e Emotion.
+   - ShadCN UI e Park UI oferecem componentes estilizados como código customizável. Considere soluções leves para componentes de servidor no React.
+
+4 - **Storybook**
+
+- Ferramenta útil para desenvolver, testar e catalogar componentes isoladamente.
+
 ## 🚀 Começando
 
 1. Clone o repositório
