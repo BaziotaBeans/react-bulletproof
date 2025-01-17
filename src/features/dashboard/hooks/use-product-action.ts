@@ -22,16 +22,16 @@ export function useProductActions() {
     try {
       if ("id" in data) {
         await updateProduct.mutateAsync(data as UpdateProductData);
-        toast({ title: "Product updated successfully" });
+        toast({ title: "Produto atualizado com sucesso" });
       } else {
         await createProduct.mutateAsync(data as CreateProductData);
-        toast({ title: "Product created successfully" });
+        toast({ title: "Produto criado com sucesso" });
       }
       setSelectedProduct(null);
     } catch {
       toast({
-        title: "Error",
-        description: "Something went wrong",
+        title: "Erro",
+        description: "Algo deu errado",
         variant: "destructive",
       });
     } finally {
@@ -43,9 +43,9 @@ export function useProductActions() {
     setDeletingProductId(id);
     try {
       await deleteProduct.mutateAsync(id);
-      toast({ title: "Product deleted successfully" });
+      toast({ title: "Produto excluído com sucesso" });
     } catch {
-      toast({ title: "Error", description: "Something went wrong", variant: "destructive" });
+      toast({ title: "Error", description: "Algo deu errado", variant: "destructive" });
     } finally {
       setDeletingProductId(null);
     }
