@@ -1,4 +1,4 @@
-# CherryIT 🍒 React Bulletproof 🛡️ ⚛️
+# React Bulletproof 🛡️ ⚛️
 
 Um modelo(Boilerplate) de projeto React pronto para produção com TypeScript, apresentando uma arquitetura modular baseada em recursos **(Feature-Based Modular Architecture)**.
 
@@ -328,6 +328,10 @@ password: password123
 
 email: user@example.com
 password: password123
+
+## 👨‍💼 Author
+
+BaziotaBeans 
 
 ## 📄 Licença
 
